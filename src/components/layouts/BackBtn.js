@@ -14,6 +14,7 @@ function BackBtn() {
       <a href="/" className="go-back-btn">
         {langs[language.current]}
       </a>
+      <h1>Helloo from Developer</h1>
     </div>
   );
 }
