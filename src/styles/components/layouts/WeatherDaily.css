@@ -1,0 +1,47 @@
+.weather-daily {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.weather-daily .table {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  text-align: left;
+}
+
+.weather-daily .table .table-body tr td {
+  font-size: 100%;
+  font-weight: 300;
+}
+
+.weather-daily .table .table-body tr td .fa-tint {
+  color: #4293ec;
+}
+
+.weather-daily .chart-wrapper {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+@media all and (max-width: 1024px) {
+  .weather-daily {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weather-daily .table {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .weather-daily .chart-wrapper {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+/*# sourceMappingURL=WeatherDaily.css.map */

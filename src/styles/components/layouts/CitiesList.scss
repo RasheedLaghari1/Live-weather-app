@@ -1,0 +1,143 @@
+$violet-darker: #110e3c;
+
+.cities-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .city-item {
+    text-align: center;
+    width: 100%;
+    max-width: 180px;
+    height: 90%;
+    flex: 1;
+
+    &:last-of-type {
+      border-radius: 1rem;
+    }
+
+    .city-item-link {
+      text-decoration: none;
+    }
+
+    .city-img {
+      border-radius: 1rem;
+      width: 95%;
+    }
+
+    .city-name {
+      font-size: 90%;
+      font-weight: 700;
+      color: $violet-darker;
+    }
+  }
+
+  .city-add {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .city-add-btn {
+      font-family: "Roboto", IRANSans;
+      font-size: 110%;
+      font-weight: 400;
+      border: none;
+      outline: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+// Media Queries
+@media all and (max-width: "1024px") {
+  .weather-container {
+    .weather-wrapper {
+      .weather-left {
+        .weather-left-container {
+          .cities-list {
+            margin-bottom: 2rem;
+
+            .city-item {
+              height: 150px;
+              text-align: center;
+
+              .city-img {
+                width: 90%;
+              }
+
+              .city-name {
+                font-size: 80%;
+              }
+            }
+
+            .city-add {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: "768px") {
+  .weather-container {
+    .weather-wrapper {
+      .weather-left {
+        .weather-left-container {
+          .cities-list {
+            .city-item {
+              height: 100px;
+
+              .city-img {
+                width: 80%;
+              }
+
+              .city-name {
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: "560px") {
+  .weather-container {
+    .weather-wrapper {
+      .weather-left {
+        .weather-left-container {
+          .cities-list {
+            flex-direction: column;
+
+            .city-item {
+              height: 200px;
+
+              &:not(:last-of-type) {
+                margin-bottom: 1rem;
+              }
+
+              .city-img {
+                width: 100%;
+              }
+
+              .city-name {
+                font-size: 100%;
+                font-weight: 400;
+              }
+            }
+
+            .city-add {
+              width: 180px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

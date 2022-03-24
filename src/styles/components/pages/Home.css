@@ -1,0 +1,117 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../images/backgrounds/seasons.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.home-container .search-container {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.home-container .search-container .form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1140px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: black;
+  background: linear-gradient(49deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.75);
+}
+
+.home-container .search-container .form-container .search-title {
+  font-size: 250%;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.home-container .search-container .form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.home-container .search-container .form-container .form .search-field {
+  font-size: 110%;
+  font-weight: 400;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.home-container .search-container .form-container .form .search-submit {
+  font-size: 100%;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #f57f17;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1024px) {
+  .home-container .search-container .form-container .search-title {
+    font-size: 170%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .home-container .search-container .form-container {
+    width: 90%;
+    padding: 1rem;
+  }
+  .home-container .search-container .form-container .search-title {
+    font-size: 130%;
+    margin-bottom: 0.5rem;
+  }
+  .home-container .search-container .form-container .form .search-field {
+    font-size: 100%;
+    padding: 0.5rem;
+  }
+  .home-container .search-container .form-container .form .search-submit {
+    padding: 0.5rem;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .home-container .search-container .form-container {
+    width: 90%;
+    padding: 0.5rem;
+  }
+  .home-container .search-container .form-container .search-title {
+    font-size: 100%;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+  .home-container .search-container .form-container .form .search-field {
+    font-size: 90%;
+    padding: 0.3rem;
+  }
+  .home-container .search-container .form-container .form .search-submit {
+    font-size: 90%;
+    font-weight: 400;
+    padding: 0.3rem;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

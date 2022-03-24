@@ -1,0 +1,44 @@
+$violet-darker: #110e3c;
+$violet-lighter: #1d1d46;
+
+.go-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .go-back-btn {
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.6rem;
+    color: #fff;
+    background-color: $violet-lighter;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $violet-darker;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media all and (max-width: "768px") {
+  .weather-container {
+    .weather-wrapper {
+      .weather-left {
+        .weather-left-container {
+          .go-back {
+            .go-back-btn {
+              font-weight: 400;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

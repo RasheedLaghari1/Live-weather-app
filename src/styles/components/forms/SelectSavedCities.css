@@ -1,0 +1,93 @@
+.form-wrapper .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.form-wrapper .form .input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.form-wrapper .form .input-group .fa-search-location {
+  position: absolute;
+  top: 25%;
+  font-size: 150%;
+  color: #110e3c;
+}
+
+.form-wrapper .form .input-group .search-input {
+  font-family: "Roboto", IRANSans;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  font-size: 100%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-wrapper .form .input-group .search-submit {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  font-size: 100%;
+  font-weight: 700;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #f57f17;
+  cursor: pointer;
+}
+
+.form-wrapper .form .input-group .search-submit:disabled {
+  cursor: not-allowed;
+  background-color: #f9ac68;
+}
+
+@media all and (max-width: 1200px) {
+  .weather-container .weather-wrapper .weather-left .weather-left-container .form-wrapper .form .input-group .fa-search-location {
+    font-size: 120%;
+  }
+  .weather-container .weather-wrapper .weather-left .weather-left-container .form-wrapper .form .input-group .search-input {
+    font-size: 100%;
+  }
+  .weather-container .weather-wrapper .weather-left .weather-left-container .form-wrapper .form .input-group .search-submit {
+    font-size: 100%;
+    font-weight: 400;
+    padding: 0.3rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .weather-container .weather-wrapper .weather-left .weather-left-container .form-wrapper .form .input-group .search-input {
+    font-size: 90%;
+  }
+  .weather-container .weather-wrapper .weather-left .weather-left-container .form-wrapper .form .input-group .search-submit {
+    font-size: 90%;
+    font-weight: 400;
+  }
+}
+/*# sourceMappingURL=SelectSavedCities.css.map */

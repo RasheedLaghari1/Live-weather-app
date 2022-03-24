@@ -1,0 +1,253 @@
+// Global Configs =========================================
+$error-background: #ff3838;
+$success-background: #20bf6b;
+$violet-darker: #110e3c;
+$violet-lighter: #1d1d46;
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &::after,
+  &::before {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", IRANSans, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@keyframes transformation {
+  0% {
+    top: 70%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.popup-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  text-align: center;
+  animation-name: transformation;
+  animation-duration: 0.5s;
+  width: 700px;
+
+  .error-message,
+  .success-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 120%;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  .error-message {
+    color: #fff;
+    background-color: $error-background;
+
+    .fa-exclamation-circle {
+      font-size: 150%;
+      color: #fff;
+      margin: 0rem 2rem;
+    }
+  }
+  .success-message {
+    color: #fff;
+    background-color: $success-background;
+
+    .fa-check-circle {
+      font-size: 150%;
+      color: #fff;
+      margin: 0rem 2rem;
+    }
+  }
+}
+
+.error-boundary-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $violet-lighter;
+
+  .error-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120%;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 70%;
+
+    .error-message {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      color: #fff;
+      background-color: $error-background;
+
+      .fa-exclamation-circle {
+        font-size: 150%;
+        color: #fff;
+        margin: 0rem 2rem;
+      }
+    }
+  }
+
+  .error-reload {
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    padding: 0.4rem 0.6rem;
+    color: #fff;
+    background-color: $success-background;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+
+.main-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .loader-img {
+    width: 500px;
+  }
+}
+
+.fall-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .loader-img {
+    width: 200px;
+  }
+}
+
+//*** MEDIA QUERIES
+@media all and (max-width: "768px") {
+  .popup-wrapper {
+    width: 400px;
+
+    .error-message,
+    .success-message {
+      font-size: 100%;
+      font-weight: 400;
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.5rem;
+    }
+    .error-message {
+      .fa-exclamation-circle {
+        font-size: 130%;
+        margin: 0rem 1rem;
+      }
+    }
+    .success-message {
+      .fa-check-circle {
+        font-size: 130%;
+        margin: 0rem 1rem;
+      }
+    }
+  }
+
+  .error-boundary-container {
+    .error-wrapper {
+      font-size: 90%;
+      font-weight: 300;
+      padding: 0.3rem 0.2rem;
+      border-radius: 0.5rem;
+      width: 80%;
+      .error-message {
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        .fa-exclamation-circle {
+          font-size: 130%;
+          margin: 0rem 2rem;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: "480px") {
+  .popup-wrapper {
+    width: 90%;
+
+    .error-message,
+    .success-message {
+      font-size: 90%;
+      font-weight: 300;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.3rem;
+    }
+    .error-message {
+      .fa-exclamation-circle {
+        font-size: 100%;
+        margin: 0rem 0.5rem;
+      }
+    }
+    .success-message {
+      .fa-check-circle {
+        font-size: 100%;
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+
+  .error-boundary-container {
+    .error-wrapper {
+      font-size: 80%;
+      font-weight: 300;
+      padding: 0.3rem 0.2rem;
+      border-radius: 0.5rem;
+      width: 95%;
+
+      .error-message {
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        width: 100%;
+
+        .fa-exclamation-circle {
+          font-size: 100%;
+          margin: 0rem 0.2rem;
+        }
+      }
+    }
+  }
+}
