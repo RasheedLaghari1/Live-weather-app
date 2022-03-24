@@ -15,6 +15,7 @@ function BackBtn() {
         {langs[language.current]}
       </a>
       <h1>Helloo from Developer</h1>
+      <h1>Helloo from Developer</h1>
     </div>
   );
 }
